@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Web.Dev.</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+    .navbar {
+      z-index: 999;
+      background: #150050;
+      color: gainsboro;
+    }
+
+    .btn {
+      background: linear-gradient(270deg, #000000 0%, #3f0071 100%);
+      color: white;
+    }
+
+    .btn:hover {
+      color: #b6a2ea;
+    }
+
+    .nav-link {
+      color: #e1e1e1;
+    }
+    .nav-link:hover {
+      color: #b6a2ea;
+    }
+    .about{
+      background: #150050;
+    }
+
+    .works h1{
+      margin-top: 20%;
+    }
+
+    .work h3{
+      margin-top: 50hv;
+    }
+
+    .footer {
+      background: #150050;
+    }
+    .carousel-inner {
+      padding: 1em;
+    }
+    .card {
+      margin: 0 0.5em;
+      box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+      border: none;
+    }
+    .card img {
+      width: 100px;
+      height: 250px;
+    }
+    .carousel-control-prev,
+    .carousel-control-next {
+      background-color: #e1e1e1;
+      width: 6vh;
+      height: 6vh;
+      border-radius: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    /* .serviceWork {
+      background: linear-gradient(to bottom, #fff 1%, #150050 99%);
+    } */
+    .serviceWork  {
+      position: relative;
+      z-index: 1;
+      background: #150050;
+    }
+
+      .serviceWork:before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      right: 0;
+      bottom: 88%;
+      left: 0;
+      background: #fff;
+    }
+    @media (min-width: 768px) {
+      .carousel-inner {
+        display: flex;
+      }
+      .carousel-item {
+        margin-right: 0;
+        flex: 0 0 33.333333%;
+        display: block;
+      }
+    }
+    @media (min-width: 425px) {
+      .carousel-inner {
+        display: flex;
+      }
+      .img-responsive {
+        height: 30vh !important;
+        width: 50vh !important;
+      }
+      .carousel-item {
+        margin-right: 0;
+        flex: 0 0 33.333333%;
+        display: block;
+      }
+      .card-body h5 {
+        font-size: 95%;
+      }
+      .card-text {
+        font-size: 70%;
+      }
+    }
+
+  </style>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg position-fixed w-100">
+      <div class="container">
+        <a class="navbar-brand text-white" href="#"><img src="img/logo.png" alt="" style="width: 100px;height:30px"></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="d-flex">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a
+                  class="nav-link active text-white"
+                  aria-current="page"
+                  href="#"
+                  >HOME</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">ABOUT</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#services">SERVICES</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#works">PORTOFOLIO</a>
+              </li>
+              <li class="nav-item active">
+                <a class="btn btn border-white" href="#contact">CONTACT US</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- jumbotron -->
+    <section class="p-5 mx-5 home" id="#home">
+      <div class="row">
+        <div class="col-md-6 p-5 align-content-center">
+          <h3 class="fw-bold fs-4 pt-5 mb-3">
+            Develop amazing web and app experiences with tips and advice from
+            the experts at Web.Dev.
+          </h3>
+          <button class="btn btn border-white">Go Details</button>
+        </div>
+
+        <div class="col-md-6">
+          <img src="img/jmbtrn.png" alt="" class="img-fluid" />
+        </div>
+      </div>
+    </section>
+
+    <!-- about us -->
+    <section class="p-5  mb-5 about" id="about">
+      <div class="text-center text-white">
+        <h2 class="fw-bold mt-2 mb-5">ABOUT US</h2>
+        <p class="fw-light" style="padding-right: 25%; padding-left: 25%">
+          Let's build the future of the web, together Take advantage of the
+          latest modern technologies to build amazing web experiences for
+          everyone.
+        </p>
+      </div>
+    </section>
+
+    <!-- our services -->
+    <section class="p-5 mb-5 serviceWork">
+    <div class="p-5 mb-5 service" id="services">
+      <h2 class="fw-bold text-center mt-2 mb-5">OUR SERVICES</h2>
+      <div
+        id="carouselExampleControls"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item text-center">
+            <div class="card">
+              <img
+                src="img/card1.png"
+                class="d-block w-100 img-responsive"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Company Profile</h5>
+                <p class="card-text">
+                  Recommended for businesses or companies that sell their
+                  products or services on a B2B basis
+                </p>
+                <a href="#" class="btn btn border-white">Go Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item text-center">
+            <div class="card">
+              <img
+                src="img/card4.png"
+                class="d-block w-100 img-responsive"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Online Shop</h5>
+                <p class="card-text">
+                  Recommended for businesses or SMEs that sell goods or services
+                  directly to consumers
+                </p>
+                <a href="#" class="btn btn border-white">Go Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item text-center">
+            <div class="card">
+              <img
+                src="img/card3.png"
+                class="d-block w-100 img-responsive"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Wordpress</h5>
+                <p class="card-text">
+                  For: Companies, Schools, Universities, Hospitals, Health
+                  Centers, Clinics, Government Agencies, etc.
+                </p>
+                <a href="#" class="btn btn border-white">Go Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item text-center">
+            <div class="card">
+              <img
+                src="img/card2.png"
+                class="d-block w-100 img-responsive"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title fw-bold">S E O</h5>
+                <p class="card-text">
+                  With the right SEO strategy traffic will increase the website
+                  will be easier for potential buyers to find
+                </p>
+                <a href="#" class="btn btn border-white">Go Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleControls"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleControls"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- our work -->
+    <div class="p-5 mb-5 work" id="works">
+      <div class="text-center text-white">
+        <h2 class="mb-4 fw-bold mt-2 mb-5"> Our Works </h2>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="works">
+              <h1 class="fw-bold">Best Car Service</h1>
+              <p class="text-white-50">IOS | ANDROID | WEB DEV</p>
+              <p class="mt-4 fw-light">
+                Make a car checkup in your Service By joining BestCarService
+                member, you can easily book services only through...
+              </p>
+              <a
+                href="https://endearing-strudel-78f95f.netlify.app/"
+                target="_blank"
+                class="btn btn border-white"
+                >Go Details</a
+              >
+            </div><br/>
+          </div>
+          <div class="col-md-6 img">
+            <img src="img/gambar1.png" alt="" class="img-fluid" />
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-md-6">
+            <img src="img/gambar2.png" alt="" class="img-fluid" />
+          </div>
+          <div class="col-md-6">
+            <div class="works">
+              <h1 class="fw-bold">Miniatur Indonesia</h1>
+              <p class="text-white-50">IOS | ANDROID | WEB DEV</p>
+              <p class="mt-4 fw-lighter">
+                MI.ID Miniatur Indonesia selain menyediakan jasa pembuatan
+                miniatur, kami juga menyediakan platform...
+              </p>
+              <a
+                href="https://bucolic-syrniki-8b4bad.netlify.app/"
+                target="_blank"
+                class="btn btn border-white"
+                >Go Details</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-md-6">
+            <div class="works">
+              <h1 class="fw-bold">Kaltim Travel</h1>
+              <p class="text-white-50">IOS | ANDROID | WEB DEV</p>
+              <p class="mt-4 fw-lighter">
+                Kaltim Travel sebuah perusahaan pariwisata yang terpercaya,
+                sudah banyak orang yang gemar traveling menggunakan jasa kami...
+              </p>
+              <a
+                href="https://clinquant-piroshki-366492.netlify.app/"
+                target="_blank"
+                class="btn btn border-white"
+                >Go Details</a
+              >
+            </div><br/>
+          </div>
+          <div class="col-md-6">
+            <img src="img/gambar3.png" alt="" class="img-fluid" />
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-md-6">
+            <img src="img/gambar4.png" alt="" class="img-fluid" />
+          </div>
+          <div class="col-md-6">
+            <div class="works">
+              <h1 class="fw-bold">AywaDonuts</h1>
+              <p class="text-white-50">IOS | ANDROID | WEB DEV</p>
+              <p class="mt-4 fw-lighter">
+                AywaDonuts merupakan aplikasi berbasis web yang kami bangun 
+                untuk memudahkan Toko AywaDonuts dalam membuat otomatisasi...
+              </p>
+              <a
+                href="#"
+                target="_blank"
+                class="btn btn border-white"
+                >Go Details</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-md-6">
+            <div class="works">
+              <h1 class="fw-bold">Covid 19 Tracker</h1>
+              <p class="text-white-50">IOS | ANDROID | WEB DEV</p>
+              <p class="mt-4 fw-lighter">
+                covid 19 Tracker berfungsi untuk mengidentifikasi, menilai dan mengelola 
+                orang-orang yang berkontak erat dengan kasus konfirmasi/probable...
+              </p>
+              <a
+                href="#"
+                target="_blank"
+                class="btn btn border-white"
+                >Go Details</a
+              >
+            </div><br/>
+          </div>
+          <div class="col-md-6">
+            <img src="img/gambar5.png" alt="" class="img-fluid" />
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-md-6">
+            <img src="img/gambar6.png" alt="" class="img-fluid" />
+          </div>
+          <div class="col-md-6">
+            <div class="works">
+              <h1 class="fw-bold">Si Fuad</h1>
+              <p class="text-white-50">IOS | ANDROID | WEB DEV</p>
+              <p class="mt-4 fw-lighter">
+                Padukan gaya dan pengalamanmu di panggung kompetitif global. Kamu diberi 13 ronde untuk menyerang dan mempertahankan sisimu dengan ...
+              </p>
+              <a
+                href="#"
+                target="_blank"
+                class="btn btn border-white"
+                >Go Details</a
+              >
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+  
+    <!-- contact -->
+    <section class="p-5 mb-5" id="contact">
+      <div class="align-items-center">
+        <div class="row">
+          <div class="col-md-6 text-center">
+            <h1 class="fw-bold fs-1" style="color: #150050; margin-top: 15%">
+              We'd Love to Hear From You
+            </h1>
+            <h5 class="fw-lighter text-black-50">
+              Whether you're curious about features, a free trial, or even
+              press-were ready to answer any and all questions.
+            </h5>
+          </div>
+
+          <div class="col-md-6">
+            <form>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Email address</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="name@example.com"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label"
+                  >Subject</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="subject"
+                  placeholder="your subject"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label"
+                  >Message</label
+                >
+                <textarea class="form-control" id="message" rows="3"></textarea>
+              </div>
+              <div class="mb-3">
+                <!-- Button trigger modal -->
+                <button
+                  type="button"
+                  class="btn btn border-white"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                >
+                  Send
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Thank You!</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            Your details has been successfully submitted. Thanks!
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="border-top p-3 text-center footer">
+      <span class="fw-lighter text-white">© 2022 kelompok stupen</span>
+    </footer>
+
+    <!-- BOoTSTRAP -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <!-- JQUERY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!-- JS -->
+    <script>
+      var multipleCardCarousel = document.querySelector(
+        "#carouselExampleControls"
+      );
+      if (window.matchMedia("(min-width: 768px)").matches) {
+        var carousel = new bootstrap.Carousel(multipleCardCarousel, {
+          interval: false,
+        });
+        var carouselWidth = $(".carousel-inner")[0].scrollWidth;
+        var cardWidth = $(".carousel-item").width();
+        var scrollPosition = 0;
+        $("#carouselExampleControls .carousel-control-next").on(
+          "click",
+          function () {
+            if (scrollPosition < carouselWidth - cardWidth * 4) {
+              scrollPosition += cardWidth;
+              $("#carouselExampleControls .carousel-inner").animate(
+                { scrollLeft: scrollPosition },
+                600
+              );
+            }
+          }
+        );
+        $("#carouselExampleControls .carousel-control-prev").on(
+          "click",
+          function () {
+            if (scrollPosition > 0) {
+              scrollPosition -= cardWidth;
+              $("#carouselExampleControls .carousel-inner").animate(
+                { scrollLeft: scrollPosition },
+                600
+              );
+            }
+          }
+        );
+      } else {
+        $(multipleCardCarousel).addClass("slide");
+      }
+    </script>
+  </body>
+</html>
